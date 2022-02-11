@@ -56,15 +56,38 @@
 
 #### Recap of the SMR problem
 - clients submit transactions to one or more nodes.
-``
--- clients: users of blockchain
--- nodes: machines running the blockchain protocol
-``
+```
+|__ clients: users of blockchain
+|__ nodes: machines running the blockchain protocol
+```
 - Each node maintains local history (append-only data structure)
 
+#### Goal
+- a protocol (a event-dirven code) taht satisfies:
+```
+|__ consistency: all nodes agree on the same history
+|__ liveness: every submitted transactions eventually added to all nodes histories
+```
 
+#### Plan
+- solve first under a bunch of assumptions, relax assumptions one-by-one
 
-
+#### Assumptions (to be relaxed)
+- permissioned
+```
+|__ permissioned: a priori known set of nodes {1, 2, 3, ...} (known IP addresses)
+|__ permission setting: you need permission to be one of the nodes participating in the protocol
+|__ permissionless: anyone can join and contribute to that protocol, such as bitcoin and ethereum
+```
+- PKI (public key infrastructure)
+```
+|__ each node i has a pki/ski pair, pki known to all nodes upfront
+```
+- Sychronous
+```
+|__ all nodes share a global clock, time steps 0, 1, 2, 3, ...
+|__ all message sent at time t arrive by time t+1 (in some arbitrary order)
+```
 
 ### L3
 **=> Synchronous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)**
