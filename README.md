@@ -53,6 +53,11 @@
 ### L2
 **=> Synchnorous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.**
 
+- Two main types of protocol
+1. Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s. Others, such as Cosmos, Terra, Algorand, Facebook DM, are also using that consensus.
+2. Bitcoin and Ethetreum -> longest-chain protocols
+
+
 ### L3
 **=> Synchnorous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)**
 
@@ -70,8 +75,4 @@
 ### L7 
 **=> The Tendermint protocal + its aprovable gurantees**
 
-- Two main types of protocol
-1. Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s. Others, such as Cosmos, Terra, Algorand, Facebook DM, are also using that consensus.
-2. Bitcoin and Ethetreum -> longest-chain protocols
 
-Bitcoin and Ethereum 
