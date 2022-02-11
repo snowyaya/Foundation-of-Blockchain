@@ -51,7 +51,7 @@
 
 
 ### L2
-**=> Synchnorous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.
+**=> Synchnorous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.**
 
 ### L3
 **=> Synchnorous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)
