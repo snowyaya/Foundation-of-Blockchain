@@ -1,5 +1,6 @@
 # Foundations of Blockchain
-- From [Tim Roughgarden](https://www.youtube.com/playlist?list=PLEGCF-WLh2RLOHv_xUGLqRts_9JxrckiA)
+-- Those notes were taken while learning basic concepts of blockchain.
+-- The lecture is from [Tim Roughgarden](https://www.youtube.com/playlist?list=PLEGCF-WLh2RLOHv_xUGLqRts_9JxrckiA)
 
 ### L1
 
