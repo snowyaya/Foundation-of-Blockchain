@@ -69,4 +69,5 @@
 
 ### L7 
 **=> The Tendermint protocal + its aprovable gurantees **
+
 Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s.
