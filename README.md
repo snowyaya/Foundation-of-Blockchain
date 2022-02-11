@@ -70,4 +70,8 @@
 ### L7 
 **=> The Tendermint protocal + its aprovable gurantees**
 
-Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s.
+- Two main types of protocol
+1. Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s. Others, such as Cosmos, Terra, Algorand, Facebook DM, are also using that consensus.
+2. Bitcoin and Ethetreum -> longest-chain protocols
+
+Bitcoin and Ethereum 
