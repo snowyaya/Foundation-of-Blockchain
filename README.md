@@ -6,6 +6,7 @@
 
 #### I. Overview
 [L1 Notes from Tim Roughgarden](https://timroughgarden.github.io/fob21/l/l1.pdf)
+[L1 Slides](https://timroughgarden.github.io/fob21/slides/F21L1.pdf)
 
 #### Blockchain Stack
 - Layer 0: the internet
@@ -18,7 +19,7 @@
 - Not about digital money
 - Principles over protocols
 
-#### II. Digital Signature Schemes
+#### II & III. Digital Signature Schemes
 
 #### Consensus
 - Keep multiple machines ("nodes") in sync, even in the face of an unreliable network, malicious attacks.
@@ -34,3 +35,37 @@
 
 #### Assumptions ("ideal signature")
 - Don't know sk => impossible to generate valid msg+sig
+
+#### IV. The SMR Problem
+- SMR stands for State Machine Replication
+- Clients submit transactions to nodes
+- Each node maintains a local appendable-only data structure (in an ordered sequence) 
+- Keep all nodes in sync; identical local histories
+
+#### Definition
+- a protocal = code to be run by each node (local computations, receive messages from other nodes + clients, send messages to other nodes)
+
+#### Goal
+- Consistency: all nodes agree on history (i.e., same transactions sequence)
+- Liveness: every valid transactions submitted eventually added to history 
+
+
+### L2
+**=> Synchnorous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.
+
+### L3
+**=> Synchnorous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)
+
+### L4
+**=> Asynchnorous model. Definition. FLP impossiblity result.
+
+#### 
+
+### L5
+**=> Asynchnorous model. Finish proof of FLP impossiblity.
+
+### L6
+**=> The portially synchnorous model. Need 67% honest.
+
+### L7 
+**=> The Tendermint protocal + its aprovable gurantees
