@@ -88,6 +88,10 @@
 |__ all nodes share a global clock, time steps 0, 1, 2, 3, ...
 |__ all message sent at time t arrive by time t+1 (in some arbitrary order)
 ```
+- All honest nodes
+```
+|__ all nodes run inherited protocol, no (intended or unintended) deviations
+```
 
 ### L3
 **=> Synchronous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)**
