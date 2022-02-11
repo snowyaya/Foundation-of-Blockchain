@@ -50,29 +50,40 @@
 - Liveness: every valid transactions submitted eventually added to history 
 
 
-### L2
-**=> Synchnorous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.**
+### L2 Byzantine Broadcase in the Synchronous Model via the Dolev-Strong Protocol
 
-- Two main types of protocol
-1. Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s. Others, such as Cosmos, Terra, Algorand, Facebook DM, are also using that consensus.
-2. Bitcoin and Ethetreum -> longest-chain protocols
+**=> Synchronous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.**
+
+#### Recap of the SMR problem
+- clients submit transactions to one or more nodes.
+```
+-- clients: users of blockchain
+-- nodes: machines running the blockchain protocol
+```
+- Each node maintains local history (append-only data structure)
+
+
+
 
 
 ### L3
-**=> Synchnorous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)**
+**=> Synchronous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)**
 
 ### L4
-**=> Asynchnorous model. Definition. FLP impossiblity result.**
+**=> Asynchronous model. Definition. FLP impossiblity result.**
 
 #### 
 
 ### L5
-**=> Asynchnorous model. Finish proof of FLP impossiblity.**
+**=> Asynchronous model. Finish proof of FLP impossiblity.**
 
 ### L6
-**=> The portially synchnorous model. Need 67% honest.**
+**=> The portially Synchronous model. Need 67% honest.**
 
 ### L7 
 **=> The Tendermint protocal + its aprovable gurantees**
 
-
+#### Two main types of protocol
+1. Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s. Others, such as Cosmos, Terra, Algorand, Facebook DM, are also using that consensus.
+2. Bitcoin and Ethetreum -> longest-chain protocols
+3. Some protocol favors "safety" => refers to BYT; Some protocol favors "liveness" => refers to longest chain
