@@ -51,23 +51,23 @@
 
 
 ### L2
-**=> Synchnorous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes. **
+**=> Synchnorous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.**
 
 ### L3
-**=> Synchnorous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof) **
+**=> Synchnorous model. Without PKI (public key infrastructure), nodes 67% honest. (Hexagon proof)**
 
 ### L4
-**=> Asynchnorous model. Definition. FLP impossiblity result. **
+**=> Asynchnorous model. Definition. FLP impossiblity result.**
 
 #### 
 
 ### L5
-**=> Asynchnorous model. Finish proof of FLP impossiblity. **
+**=> Asynchnorous model. Finish proof of FLP impossiblity.**
 
 ### L6
-**=> The portially synchnorous model. Need 67% honest. **
+**=> The portially synchnorous model. Need 67% honest.**
 
 ### L7 
-**=> The Tendermint protocal + its aprovable gurantees **
+**=> The Tendermint protocal + its aprovable gurantees**
 
 Tendermint is built on top of BFT (Byzentine fault tolerance) protocol, invented in 1980s.
