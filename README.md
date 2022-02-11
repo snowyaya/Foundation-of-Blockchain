@@ -56,10 +56,10 @@
 
 #### Recap of the SMR problem
 - clients submit transactions to one or more nodes.
-```
+``
 -- clients: users of blockchain
 -- nodes: machines running the blockchain protocol
-```
+``
 - Each node maintains local history (append-only data structure)
 
 
