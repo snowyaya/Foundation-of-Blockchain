@@ -50,7 +50,7 @@
 - Liveness: every valid transactions submitted eventually added to history 
 
 
-### L2 Byzantine Broadcase in the Synchronous Model via the Dolev-Strong Protocol
+### L2 - Byzantine Broadcase in the Synchronous Model via the Dolev-Strong Protocol
 
 **=> Synchronous model. Dolev-Strong protocol (for BB, SMR), tolerates any # of dishonest nodes.**
 
@@ -91,6 +91,57 @@
 - All honest nodes
 ```
 |__ all nodes run inherited protocol, no (intended or unintended) deviations
+```
+
+#### Solution via Round-Robin Leaders
+- Idea: nodes take turns as "leaders"
+```
+|__ leader sends ordered list of transactions it knows about to all others nodes (plays the role of a "block")
+|__ when node receives most recent leader's ordered list, amends it to local history
+
+```
+
+- Note: satisfies consistency + liveness
+
+#### Faulty/Byzantine Nodes
+- Definition: a node that is not honest is called faulty
+- Types of faulty nodes
+```
+|__ crash fault (run honestly until some failure time, then stop entirely - no more messages sent)
+|__ omission fault (may selectively withhold messages it's supposed to send)
+|__ Byzathine fault (can behave arbitrarily, though still can't break cryptography) 
+
+```
+
+- Canchicalpoly: send conflicting messages to different nodes
+- New assumption 4: for known parameter f , <= f nodes are Byzatine,  other >= n-f nodes are honest
+
+####  The Byzatine Broadcast Problem
+- Idea: stick with the rotating leaders approach
+- Subroutine: Byzatine broadcase (BB)
+```
+|__ one node is the sender (known to all up front)
+|__ Sender has a private input  v_* E V
+```
+- Goals
+```
+|__ termination: reach honest nodes eventually halts with some value, v_i E V
+|__ agreement: all honest nodes choose the same value v_i
+|__ vallidity: if sender is honest, all honest v_i's equal v_*
+```
+
+#### SMR Reduces to BB
+- SMR Protocol: given a Byzantine broadcast subroutine
+```
+|__ take turns as leader (e.g., round-robin)
+|__ run BB protocol (with sender = current leader), agree on a transaction list L
+|__ each node appends L to its local history
+```
+
+- Why is the reduction correct?
+```
+|__ BB agreement => SMR consitency (every time step, all honest nodes add the same transaction list)
+|__ BB validity => SMR liveness (if honest node knows about a transaction, eventually all become the leader/sender, validity => all honest nodes add that transaction)
 ```
 
 ### L3
